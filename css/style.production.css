@@ -1,0 +1,858 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+/* Body Styles */
+/* the color names and their values */
+
+/* Color Palette */
+/*
+primary-color: #357b70;       // Turqoise
+secondary-color: #6c757d;     // Gray
+text-primary-color: #333333;  // Black
+text-secondary-color: #666666;// Dark Gray
+background-color: #f4f4f4;    // Light Gray 2
+*/
+
+a {
+    color: #357b70;
+  }
+
+* {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+/* Header Styles*/
+.header {
+    text-align: center;
+    background-color: #ffffff;
+    /* Background color for the header */
+    padding: 20px;
+    /* Add padding to the top and bottom of the header */
+}
+
+.header-content {
+    max-width: 700px;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    /* Align items vertically */
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; /* Allow content to wrap */
+}
+
+.header-left {
+    margin-bottom: 20px; /* Add margin to separate from header-right */
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1; /* Make header-left take up available space */
+}
+
+.header-right {
+    text-align: center;
+    /* Align text to the center */
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    /* Include padding and border in the width */
+    padding: 20px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1; /* Make header-right take up available space */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; /* Center content horizontally */
+}
+
+.profile-picture {
+    border-radius: 50%;
+    /* Make the profile picture round */
+    max-width: 100%;
+    /* Make sure the image doesn't overflow its container */
+    height: auto;
+    /* Allow the height to adjust accordingly */
+    -webkit-box-shadow: 0 4px 6px 0 rgba(34, 60, 80, 0.16);
+            box-shadow: 0 4px 6px 0 rgba(34, 60, 80, 0.16);
+    /* Add shadow effect */
+    -webkit-transition: all ease-in-out .2s;
+    -o-transition: all ease-in-out .2s;
+    transition: all ease-in-out .2s;
+    /* Add transition effect */
+}
+
+.profile-picture:hover {
+    -webkit-box-shadow: 0 8px 12px 0 rgba(34, 60, 80, 0.16);
+            box-shadow: 0 8px 12px 0 rgba(34, 60, 80, 0.16);
+    /* Change shadow on hover */
+}
+
+/* Navigation Button Styles */
+.button-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    /* Allow buttons to wrap to the next line if necessary */
+}
+
+.button-container a {
+    background-color: #ffffff;
+    border: 2px solid #dddddd;
+    border-radius: 20px;
+    color: #2b2b2b;
+    font-family: Sora, sans-serif;
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    /* Adjust the margin between buttons */
+    cursor: pointer;
+    text-decoration: none;
+    /* Remove underline from links */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.button-container a:hover {
+    background-color: #dddddd;
+    border-color: #215f54;
+    color: #000000;
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+a:hover {
+    text-decoration: none;
+    /* No underlining when hovering over a link */
+    cursor: pointer;
+    /* Change cursor to a hand pointer on hover */
+}
+
+a:visited {
+    color: #489c79;
+    /* visited link */
+}
+
+a:active {
+    color: #357b70;
+    /* selected link */
+}
+
+.navigation-list__item {
+    display: inline-block;
+    margin-right: 20px;
+    text-decoration: none;
+    color: #2b2b2b;
+}
+
+.navigation-list__item--active {
+    font-weight: bold;
+    /* Highlight active link */
+    color: #357b70;
+    /* Set active link color */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .header-content {
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr; /* Single column layout */
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; /* Center items vertically */
+    }
+    
+    .header-left,
+    .header-right {
+        width: 100%; /* Ensure full width for both header elements */
+        text-align: center; /* Center align the text content */
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column; /* Stack elements vertically */
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; /* Center items horizontally */
+    }
+
+    .header-left {
+        margin: 0 auto;
+    }
+
+    .header-right {
+        -webkit-box-ordinal-group: 3;
+            -ms-flex-order: 2;
+                order: 2; /* Move header-right content below header-left on smaller screens */
+        margin-top: 20px; /* Add margin to separate header-right from header-left */
+    }
+
+    .profile-picture {
+        width: 220px; /* Adjust width for smaller screens */
+        margin-top: 20px;
+        /* Add space between profile picture and header content */
+    }
+}
+
+@media (max-width: 576px) {
+
+    .profile-picture {
+        width: 100%; /* Adjust width to fill the container */
+        max-width: 220px; /* Limit maximum width */
+        margin-top: 10px;
+        /* Adjust margin top */
+    }
+
+    .navigation-list__item {
+        margin-right: 10px;
+        /* Reduce margin between navigation links */
+    }
+
+    .header-left,
+    .header-right {
+        width: 100%;
+        /* Ensure full width for both header elements */
+        text-align: center;
+        /* Center align the text content */
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column; /* Stack elements vertically */
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; /* Center items horizontally */
+    }
+
+    .header-left {
+        margin: 0 auto;
+        }
+
+    .header-right {
+        -webkit-box-ordinal-group: 3;
+            -ms-flex-order: 2;
+                order: 2;
+        /* Move header-right content below header-left on smaller screens */
+    }
+}
+
+/* Body Styles */
+body {
+    font-family: 'Roboto Flex', roboto-flex;
+    background: undefined;
+    /* Using variables for color values */
+    padding: 30px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(204, 204, 204, 204)),
+            color-stop(rgba(204, 204, 204, 0.17)), to(rgba(204, 204, 204, 204)));
+    background-image: -o-linear-gradient(left, rgba(204, 204, 204, 204),
+            rgba(204, 204, 204, 0.17), rgba(204, 204, 204, 204));
+    background-image: linear-gradient(to right, rgba(204, 204, 204, 204),
+            rgba(204, 204, 204, 0.17), rgba(204, 204, 204, 204));
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Sora', sora;
+}
+
+/* Contact Form Styles */
+.contact-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    /* Center items horizontally */
+}
+
+.form-group {
+    margin-bottom: 20px;
+    /* Adjust spacing between form groups */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    /* Adjust spacing between label and input/textarea */
+}
+
+form input,
+textarea {
+    padding: 5px;
+    border-radius: 5px;
+    width: 240px;
+}
+
+form input [type="submit"] {
+    width: 240px;
+}
+
+.submit-button-wrapper {
+    margin: 20px 0;
+
+}
+
+/* Main Body Styles */
+.about-grid {
+    display: -ms-grid;
+    display: grid;
+    /* Use CSS grid */
+    -ms-grid-columns: 50% 50%;
+    grid-template-columns: 50% 50%;
+    /* Define grid columns */
+}
+
+.i-am,
+.i-like {
+    text-align: left;
+}
+
+.shortaboutme {
+    -webkit-padding-start: 40px;
+            padding-inline-start: 40px;
+}
+
+.about-list {
+    list-style: none;
+    text-align: left;
+}
+
+.body {
+    max-width: 840px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+.body>div {
+    margin: 20px auto;
+}
+
+.contact-form h4 {
+    color: rgb(66, 66, 66);
+}
+
+
+@media (max-width: 480px) {
+    .about-grid {
+        -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    }
+}
+
+/* Projects Section Styles */
+.projects-heading {
+    text-align: center;
+}
+
+.projects-grid {
+    display: -ms-grid;
+    display: grid;
+    /* Use CSS grid */
+    -ms-grid-columns: 450px 450px;
+    grid-template-columns: 450px 450px;
+    /* Define grid columns */
+    -ms-grid-rows: 500px 500px;
+    grid-template-rows: 500px 500px;
+    /* Define grid rows */
+}
+
+.projects-grid > *:nth-child(1) {
+         -ms-grid-row: 1;
+         -ms-grid-column: 1;
+}
+
+.projects-grid > *:nth-child(2) {
+         -ms-grid-row: 1;
+         -ms-grid-column: 2;
+}
+
+.projects-grid > *:nth-child(3) {
+         -ms-grid-row: 2;
+         -ms-grid-column: 1;
+}
+
+.projects-grid > *:nth-child(4) {
+         -ms-grid-row: 2;
+         -ms-grid-column: 2;
+}
+
+.project-image-wrapper {
+    -ms-grid-column-align: center;
+        justify-self: center;
+    padding: 12%;
+    position: relative;
+}
+
+.project-image {
+    border-radius: 5px;
+    -webkit-box-shadow: 0 4px 6px 0 rgba(34, 60, 80, 0.16);
+            box-shadow: 0 4px 6px 0 rgba(34, 60, 80, 0.16);
+    -webkit-transition: all ease-in-out .2s;
+    -o-transition: all ease-in-out .2s;
+    transition: all ease-in-out .2s;
+    width: 100%;
+    /* Set the width of the image */
+    height: auto;
+    /* Set the height of the image */
+}
+
+.project-image:hover {
+    -webkit-filter: brightness(.75);
+            filter: brightness(.75);
+    -webkit-box-shadow: 0 8px 12px 0 rgba(34, 60, 80, 0.16);
+            box-shadow: 0 8px 12px 0 rgba(34, 60, 80, 0.16);
+    -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+            transform: scale(1.05);
+    /* Magnify effect on hover */
+}
+
+.project-image-wrapper:hover>h4 {
+    visibility: visible;
+}
+
+.project-image-wrapper {
+    position: relative;
+    display: inline-block;
+    /* Ensure the wrapper fits around the image */
+}
+
+.project-image-wrapper>h4 {
+    position: absolute;
+    top: 50%;
+    /* Place the title 50% from the top */
+    left: 50%;
+    /* Place the title 50% from the left */
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    /* Adjust the positioning to center */
+    color: white;
+    visibility: hidden;
+    z-index: 2;
+    -webkit-transition: all ease-in-out .2s;
+    -o-transition: all ease-in-out .2s;
+    transition: all ease-in-out .2s;
+    text-align: center;
+    /* Center the text */
+}
+
+.projects-grid {
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    /* Change to a single column layout */
+    -ms-grid-rows: auto;
+    grid-template-rows: auto;
+    /* Allow rows to adjust dynamically */
+}
+
+.projects-grid > *:nth-child(1) {
+         -ms-grid-row: 1;
+         -ms-grid-column: 1;
+}
+
+.projects-grid > *:nth-child(2) {
+         -ms-grid-row: 1;
+         -ms-grid-column: 2;
+}
+
+@media (max-width: 650px) {
+    .projects-grid {
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        /* Ensure a single column layout */
+    }
+}
+
+.centered-heading {
+    text-align: center;
+}
+
+/* Footer Styles */
+.page-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    /* Allow links to wrap to the next line if needed */
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    /* Spread links evenly with space between them */
+    max-width: 840px;
+    /* Adjust max-width as needed */
+    margin: 0 auto;
+    /* Center the links horizontally */
+}
+
+.links-title {
+    text-align: center;
+    /* Center the title */
+    width: 100%;
+    /* Ensure the title takes up full width */
+}
+
+.links-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    /* Remove default margin */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    /* Make the list items flex containers */
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    /* Spread list items evenly with space between them */
+    width: 100%;
+    /* Ensure list items take up full width */
+}
+
+.links-list li {
+    width: calc(25% - 10px);
+    /* Adjust the width of each item to create even spacing */
+    /* For example, if there are 4 items, each item will take up 25% of the container width with 10px margin between them */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    /* Make the list item a flex container */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    /* Align items vertically */
+}
+
+.links-list li img {
+    margin-right: 5px;
+    /* Add space between image and text */
+    height: 15px;
+    /* Ensure all images have the same height */
+}
+
+/* Link Styling */
+a {
+    color: #357b70;
+    /* Your link color */
+    text-decoration: none;
+    /* Remove underline */
+    -webkit-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+    /* Transition for color change */
+}
+
+/* Hover Effect */
+a:hover {
+    color: #215f54;
+    /* New color on hover */
+}
+
+/* Download CV Button Styling */
+.button {
+    /* overwrites browser defaults and resets the border */
+    border: none;
+    display: inline-block;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    /* takes the font from the outer container */
+    font-family: inherit;
+    /* styles the button */
+    background-color: #357b70;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 3px;
+    /* width of the border, type, color */
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    -webkit-transition-duration: 0.2s;
+         -o-transition-duration: 0.2s;
+            transition-duration: 0.2s;
+    -webkit-transition-property: opacity;
+    -o-transition-property: opacity;
+    transition-property: opacity;
+    /* Center alignment */
+    text-align: center;
+}
+button {
+    /* overwrites browser defaults and resets the border */
+    border: none;
+    display: inline-block;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    /* takes the font from the outer container */
+    font-family: inherit;
+    /* styles the button */
+    background-color: #357b70;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 3px;
+    /* width of the border, type, color */
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    -webkit-transition-duration: 0.2s;
+         -o-transition-duration: 0.2s;
+            transition-duration: 0.2s;
+    -webkit-transition-property: opacity;
+    -o-transition-property: opacity;
+    transition-property: opacity;
+    /* Center alignment */
+    text-align: center;
+}
+
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
+    /* lets the mouse appear as a hand when hovering over the button */
+    cursor: pointer;
+    /* reduces the opacity of the button to 80% */
+    opacity: 0.8;
+}
+
+/* About Berlin Picture and Animation*/
+.sun {
+    -webkit-animation: 4s color-change infinite alternate linear;
+            animation: 4s color-change infinite alternate linear;
+}
+
+@-webkit-keyframes color-change {
+    0% {
+        fill: #edc655;
+    }
+
+    50% {
+        fill: #fcffad;
+    }
+
+    100% {
+        fill: #f76414;
+    }
+}
+
+@keyframes color-change {
+    0% {
+        fill: #edc655;
+    }
+
+    50% {
+        fill: #fcffad;
+    }
+
+    100% {
+        fill: #f76414;
+    }
+}
+
+.cloud-front {
+    -webkit-animation: 30s cloud-move infinite alternate linear;
+            animation: 30s cloud-move infinite alternate linear;
+}
+
+@-webkit-keyframes cloud-move {
+    from {
+        -webkit-transform: translate(0, 50px);
+                transform: translate(0, 50px);
+    }
+
+    to {
+        -webkit-transform: translate(200px, 50px);
+                transform: translate(200px, 50px);
+    }
+}
+
+@keyframes cloud-move {
+    from {
+        -webkit-transform: translate(0, 50px);
+                transform: translate(0, 50px);
+    }
+
+    to {
+        -webkit-transform: translate(200px, 50px);
+                transform: translate(200px, 50px);
+    }
+}
+
+.cloud-back {
+    -webkit-animation: 34s cloud-move-reverse infinite alternate linear;
+            animation: 34s cloud-move-reverse infinite alternate linear;
+}
+
+@-webkit-keyframes cloud-move-reverse {
+    from {
+        -webkit-transform: translate(446px, 48px);
+                transform: translate(446px, 48px);
+    }
+
+    to {
+        -webkit-transform: translate(100px, 48px);
+                transform: translate(100px, 48px);
+    }
+}
+
+@keyframes cloud-move-reverse {
+    from {
+        -webkit-transform: translate(446px, 48px);
+                transform: translate(446px, 48px);
+    }
+
+    to {
+        -webkit-transform: translate(100px, 48px);
+                transform: translate(100px, 48px);
+    }
+}
+
+#about-picture {
+    display: block;
+    /* Ensures SVG behaves like a block element */
+    margin: 0 auto;
+    /* Centers the SVG horizontally */
+}
+
+@media all and (max-width: 500px) {
+    .grid {
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media all and (min-width: 500px) and (max-width: 750px) {
+    .grid {
+        -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media all and (max-width: 750px) {
+    .grid {
+        grid-gap: 10px;
+    }
+
+    .grid__item:last-child {
+        grid-column: auto / auto;
+        grid-row: auto / auto;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+}
+
+h1 {
+    font-size: 32px;
+    /* Adjust as needed */
+}
+
+h2 {
+    font-size: 24px;
+    /* Adjust as needed */
+}
+
+/* Responsive Font Size Adjustment */
+@media (max-width: 500px) {
+    h1 {
+        font-size: 28px;
+        /* Adjust as needed for smaller screens */
+    }
+
+    h2 {
+        font-size: 20px;
+        /* Adjust as needed for smaller screens */
+    }
+}
+
+/* @supports block for CSS grid properties */
+@supports (display: grid) {
+    .header-content {
+        display: -ms-grid;
+        display: grid;
+        /* Use CSS grid */
+        -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+        /* Define grid columns */
+    }
+
+    @media (max-width: 576px) {
+        .header-content {
+            display: -ms-grid;
+            display: grid;
+            -ms-grid-columns: 1fr;
+            grid-template-columns: 1fr; /* Single column layout */
+        }
+
+        .header-right {
+            margin: 0 auto;
+        }
+    }
+
+    .header-left,
+    .header-right {
+        display: block;
+        width: auto;
+        /* Reset width */
+    }
+
+    .profile-picture {
+        width: 100%;
+        /* Set fixed width for the profile picture */
+        height: auto;
+        /* Set fixed height for the profile picture */
+        max-width: 220px;
+        /* Ensure the image doesn't exceed its container */
+        border-radius: 50%;
+        /* Make the profile picture round */
+        -webkit-box-shadow: 0 4px 6px 0 rgba(34, 60, 80, 0.16);
+                box-shadow: 0 4px 6px 0 rgba(34, 60, 80, 0.16);
+        /* Add shadow effect */
+        -webkit-transition: all ease-in-out .2s;
+        -o-transition: all ease-in-out .2s;
+        transition: all ease-in-out .2s;
+        /* Add transition effect */
+    }
+}

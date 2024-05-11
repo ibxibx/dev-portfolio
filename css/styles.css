@@ -1,0 +1,675 @@
+/* Body Styles */
+/* the color names and their values */
+
+/* Color Palette */
+/*
+primary-color: #357b70;       // Turqoise
+secondary-color: #6c757d;     // Gray
+text-primary-color: #333333;  // Black
+text-secondary-color: #666666;// Dark Gray
+background-color: #f4f4f4;    // Light Gray 2
+*/
+
+:root {
+    --primary-color: #357b70;
+    --secondary-color: #6c757d;
+    --dark-grey: #2b2b2b;
+    --deep-gray: #333333;
+    --light-gray: #dddddd;
+    --middle-gray: #6c757d;
+    --white: #ffffff;
+    --black: #000000;
+    --light-green: #489c79;
+    --turquoise: #05676e;
+    --green-turquoise: #357b70;         /* Primary Color */
+    --lighter-green-turquoise: #489c79; /* Lighter version of primary color */
+    --dark-turquoise: #215f54;          /* Darker version of primary color */
+    --yellow: #edc655;
+    --lemon: #fcffad;
+    --deep-orange: #f76414;
+
+    --color_1: var(--primary-color);
+    --color_2: var(--deep-gray);
+    --color_3: var(--dark-grey);
+    --color_4: var(--turquoise);
+    --color_5: var(--light-green);
+    --color_6: var(--green-turquoise);
+    --color_7: var(--black);
+    --color_8: var(--white);
+    --color_9: var(--dark-turquoise);
+
+    --background-color_1: var(--white);
+    --background-color_2: var(--light-gray);
+    --background-color_3: var(--green-turquoise);
+
+    --border-color_1: var(--light-gray);
+
+    --font-family_1: Sora, sans-serif;
+    --font-family_2: 'Roboto Flex', roboto-flex;
+    --font-family_3: 'Sora', sora;
+    --font-family_4: inherit;
+}
+
+a {
+    color: var(--color_1);
+  }
+
+* {
+    box-sizing: border-box;
+}
+
+/* Header Styles*/
+.header {
+    text-align: center;
+    background-color: var(--color_8);
+    /* Background color for the header */
+    padding: 20px;
+    /* Add padding to the top and bottom of the header */
+}
+
+.header-content {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Align items vertically */
+    flex-wrap: wrap; /* Allow content to wrap */
+}
+
+.header-left {
+    margin-bottom: 20px; /* Add margin to separate from header-right */
+    flex: 1; /* Make header-left take up available space */
+}
+
+.header-right {
+    text-align: center;
+    /* Align text to the center */
+    box-sizing: border-box;
+    /* Include padding and border in the width */
+    padding: 20px;
+    flex: 1; /* Make header-right take up available space */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+}
+
+.profile-picture {
+    border-radius: 50%;
+    /* Make the profile picture round */
+    max-width: 100%;
+    /* Make sure the image doesn't overflow its container */
+    height: auto;
+    /* Allow the height to adjust accordingly */
+    box-shadow: 0 4px 6px 0 rgba(34, 60, 80, 0.16);
+    /* Add shadow effect */
+    transition: all ease-in-out .2s;
+    /* Add transition effect */
+}
+
+.profile-picture:hover {
+    box-shadow: 0 8px 12px 0 rgba(34, 60, 80, 0.16);
+    /* Change shadow on hover */
+}
+
+/* Navigation Button Styles */
+.button-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* Allow buttons to wrap to the next line if necessary */
+}
+
+.button-container a {
+    background-color: var(--color_8);
+    border: 2px solid var(--border-color_1);
+    border-radius: 20px;
+    color: var(--color_3);
+    font-family: var(--font-family_1);
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    /* Adjust the margin between buttons */
+    cursor: pointer;
+    text-decoration: none;
+    /* Remove underline from links */
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.button-container a:hover {
+    background-color: var(--background-color_2);
+    border-color: var(--color_9);
+    color: var(--color_7);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+a:hover {
+    text-decoration: none;
+    /* No underlining when hovering over a link */
+    cursor: pointer;
+    /* Change cursor to a hand pointer on hover */
+}
+
+a:visited {
+    color: var(--color_5);
+    /* visited link */
+}
+
+a:active {
+    color: var(--color_6);
+    /* selected link */
+}
+
+.navigation-list__item {
+    display: inline-block;
+    margin-right: 20px;
+    text-decoration: none;
+    color: var(--color_3);
+}
+
+.navigation-list__item--active {
+    font-weight: bold;
+    /* Highlight active link */
+    color: var(--color_6);
+    /* Set active link color */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .header-content {
+        display: grid;
+        grid-template-columns: 1fr; /* Single column layout */
+        align-items: center; /* Center items vertically */
+    }
+    
+    .header-left,
+    .header-right {
+        width: 100%; /* Ensure full width for both header elements */
+        text-align: center; /* Center align the text content */
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .header-left {
+        margin: 0 auto;
+    }
+
+    .header-right {
+        order: 2; /* Move header-right content below header-left on smaller screens */
+        margin-top: 20px; /* Add margin to separate header-right from header-left */
+    }
+
+    .profile-picture {
+        width: 220px; /* Adjust width for smaller screens */
+        margin-top: 20px;
+        /* Add space between profile picture and header content */
+    }
+}
+
+@media (max-width: 576px) {
+
+    .profile-picture {
+        width: 100%; /* Adjust width to fill the container */
+        max-width: 220px; /* Limit maximum width */
+        margin-top: 10px;
+        /* Adjust margin top */
+    }
+
+    .navigation-list__item {
+        margin-right: 10px;
+        /* Reduce margin between navigation links */
+    }
+
+    .header-left,
+    .header-right {
+        width: 100%;
+        /* Ensure full width for both header elements */
+        text-align: center;
+        /* Center align the text content */
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .header-left {
+        margin: 0 auto;
+        }
+
+    .header-right {
+        order: 2;
+        /* Move header-right content below header-left on smaller screens */
+    }
+}
+
+/* Body Styles */
+body {
+    font-family: 'Roboto Flex', roboto-flex;
+    background: var(--background-color);
+    /* Using variables for color values */
+    padding: 30px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(204, 204, 204, 204),
+            rgba(204, 204, 204, 0.17), rgba(204, 204, 204, 204));
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Sora', sora;
+}
+
+/* Contact Form Styles */
+.contact-form {
+    display: flex;
+    justify-content: center;
+    /* Center items horizontally */
+}
+
+.form-group {
+    margin-bottom: 20px;
+    /* Adjust spacing between form groups */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    /* Adjust spacing between label and input/textarea */
+}
+
+form input,
+textarea {
+    padding: 5px;
+    border-radius: 5px;
+    width: 240px;
+}
+
+form input [type="submit"] {
+    width: 240px;
+}
+
+.submit-button-wrapper {
+    margin: 20px 0;
+
+}
+
+/* Main Body Styles */
+.about-grid {
+    display: grid;
+    /* Use CSS grid */
+    grid-template-columns: 50% 50%;
+    /* Define grid columns */
+}
+
+.i-am,
+.i-like {
+    text-align: left;
+}
+
+.shortaboutme {
+    padding-inline-start: 40px;
+}
+
+.about-list {
+    list-style: none;
+    text-align: left;
+}
+
+.body {
+    max-width: 840px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+.body>div {
+    margin: 20px auto;
+}
+
+.contact-form h4 {
+    color: rgb(66, 66, 66);
+}
+
+
+@media (max-width: 480px) {
+    .about-grid {
+        grid-template-columns: 100%;
+    }
+}
+
+/* Projects Section Styles */
+.projects-heading {
+    text-align: center;
+}
+
+.projects-grid {
+    display: grid;
+    /* Use CSS grid */
+    grid-template-columns: 450px 450px;
+    /* Define grid columns */
+    grid-template-rows: 500px 500px;
+    /* Define grid rows */
+}
+
+.project-image-wrapper {
+    justify-self: center;
+    padding: 12%;
+    position: relative;
+}
+
+.project-image {
+    border-radius: 5px;
+    box-shadow: 0 4px 6px 0 rgba(34, 60, 80, 0.16);
+    transition: all ease-in-out .2s;
+    width: 100%;
+    /* Set the width of the image */
+    height: auto;
+    /* Set the height of the image */
+}
+
+.project-image:hover {
+    filter: brightness(.75);
+    box-shadow: 0 8px 12px 0 rgba(34, 60, 80, 0.16);
+    transform: scale(1.05);
+    /* Magnify effect on hover */
+}
+
+.project-image-wrapper:hover>h4 {
+    visibility: visible;
+}
+
+.project-image-wrapper {
+    position: relative;
+    display: inline-block;
+    /* Ensure the wrapper fits around the image */
+}
+
+.project-image-wrapper>h4 {
+    position: absolute;
+    top: 50%;
+    /* Place the title 50% from the top */
+    left: 50%;
+    /* Place the title 50% from the left */
+    transform: translate(-50%, -50%);
+    /* Adjust the positioning to center */
+    color: white;
+    visibility: hidden;
+    z-index: 2;
+    transition: all ease-in-out .2s;
+    text-align: center;
+    /* Center the text */
+}
+
+.projects-grid {
+    grid-template-columns: 1fr 1fr;
+    /* Change to a single column layout */
+    grid-template-rows: auto;
+    /* Allow rows to adjust dynamically */
+}
+
+@media (max-width: 650px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+        /* Ensure a single column layout */
+    }
+}
+
+.centered-heading {
+    text-align: center;
+}
+
+/* Footer Styles */
+.page-footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.links {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow links to wrap to the next line if needed */
+    justify-content: space-between;
+    /* Spread links evenly with space between them */
+    max-width: 840px;
+    /* Adjust max-width as needed */
+    margin: 0 auto;
+    /* Center the links horizontally */
+}
+
+.links-title {
+    text-align: center;
+    /* Center the title */
+    width: 100%;
+    /* Ensure the title takes up full width */
+}
+
+.links-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    /* Remove default margin */
+    display: flex;
+    /* Make the list items flex containers */
+    justify-content: space-between;
+    /* Spread list items evenly with space between them */
+    width: 100%;
+    /* Ensure list items take up full width */
+}
+
+.links-list li {
+    width: calc(25% - 10px);
+    /* Adjust the width of each item to create even spacing */
+    /* For example, if there are 4 items, each item will take up 25% of the container width with 10px margin between them */
+    display: flex;
+    /* Make the list item a flex container */
+    align-items: center;
+    /* Align items vertically */
+}
+
+.links-list li img {
+    margin-right: 5px;
+    /* Add space between image and text */
+    height: 15px;
+    /* Ensure all images have the same height */
+}
+
+/* Link Styling */
+a {
+    color: var(--color_1);
+    /* Your link color */
+    text-decoration: none;
+    /* Remove underline */
+    transition: color 0.3s ease;
+    /* Transition for color change */
+}
+
+/* Hover Effect */
+a:hover {
+    color: var(--color_9);
+    /* New color on hover */
+}
+
+/* Download CV Button Styling */
+.button,
+button {
+    /* overwrites browser defaults and resets the border */
+    border: none;
+    display: inline-block;
+    align-items: center;
+    /* takes the font from the outer container */
+    font-family: inherit;
+    /* styles the button */
+    background-color: var(--color_1);
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 3px;
+    /* width of the border, type, color */
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    transition-duration: 0.2s;
+    transition-property: opacity;
+    /* Center alignment */
+    text-align: center;
+}
+
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
+    /* lets the mouse appear as a hand when hovering over the button */
+    cursor: pointer;
+    /* reduces the opacity of the button to 80% */
+    opacity: 0.8;
+}
+
+/* About Berlin Picture and Animation*/
+.sun {
+    animation: 4s color-change infinite alternate linear;
+}
+
+@keyframes color-change {
+    0% {
+        fill: var(--yellow);
+    }
+
+    50% {
+        fill: var(--lemon);
+    }
+
+    100% {
+        fill: var(--deep-orange);
+    }
+}
+
+.cloud-front {
+    animation: 30s cloud-move infinite alternate linear;
+}
+
+@keyframes cloud-move {
+    from {
+        transform: translate(0, 50px);
+    }
+
+    to {
+        transform: translate(200px, 50px);
+    }
+}
+
+.cloud-back {
+    animation: 34s cloud-move-reverse infinite alternate linear;
+}
+
+@keyframes cloud-move-reverse {
+    from {
+        transform: translate(446px, 48px);
+    }
+
+    to {
+        transform: translate(100px, 48px);
+    }
+}
+
+#about-picture {
+    display: block;
+    /* Ensures SVG behaves like a block element */
+    margin: 0 auto;
+    /* Centers the SVG horizontally */
+}
+
+@media all and (max-width: 500px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media all and (min-width: 500px) and (max-width: 750px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media all and (max-width: 750px) {
+    .grid {
+        grid-gap: 10px;
+    }
+
+    .grid__item:last-child {
+        grid-column: auto / auto;
+        grid-row: auto / auto;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+}
+
+h1 {
+    font-size: 32px;
+    /* Adjust as needed */
+}
+
+h2 {
+    font-size: 24px;
+    /* Adjust as needed */
+}
+
+/* Responsive Font Size Adjustment */
+@media (max-width: 500px) {
+    h1 {
+        font-size: 28px;
+        /* Adjust as needed for smaller screens */
+    }
+
+    h2 {
+        font-size: 20px;
+        /* Adjust as needed for smaller screens */
+    }
+}
+
+/* @supports block for CSS grid properties */
+@supports (display: grid) {
+    .header-content {
+        display: grid;
+        /* Use CSS grid */
+        grid-template-columns: auto auto;
+        /* Define grid columns */
+    }
+
+    @media (max-width: 576px) {
+        .header-content {
+            display: grid;
+            grid-template-columns: 1fr; /* Single column layout */
+        }
+
+        .header-right {
+            margin: 0 auto;
+        }
+    }
+
+    .header-left,
+    .header-right {
+        display: block;
+        width: auto;
+        /* Reset width */
+    }
+
+    .profile-picture {
+        width: 100%;
+        /* Set fixed width for the profile picture */
+        height: auto;
+        /* Set fixed height for the profile picture */
+        max-width: 220px;
+        /* Ensure the image doesn't exceed its container */
+        border-radius: 50%;
+        /* Make the profile picture round */
+        box-shadow: 0 4px 6px 0 rgba(34, 60, 80, 0.16);
+        /* Add shadow effect */
+        transition: all ease-in-out .2s;
+        /* Add transition effect */
+    }
+}
