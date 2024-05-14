@@ -149,6 +149,14 @@ a {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Add margin when the buttons wrap */
+@media (max-width: 768px) {
+    .button-container a {
+        margin: 10px;
+        /* Add margin around buttons */
+    }
+}
+
 a:hover {
     text-decoration: none;
     /* No underlining when hovering over a link */
