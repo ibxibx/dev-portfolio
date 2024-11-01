@@ -1,6 +1,6 @@
 # Personal Developer Portfolio
 
-Welcome to my portfolio website repository! This responsive website showcases my journey as a full-stack developer and the projects I've built throughout my development career.
+Welcome to my portfolio website repository! This responsive website showcases my journey as a full-stack developer and the projects I've built throughout my development course at Career Foundry.
 
 ## 🌟 Live Demo
 Visit my portfolio at: [https://ibxibx.github.io/dev-portfolio/](https://ibxibx.github.io/dev-portfolio/)
@@ -84,8 +84,3 @@ While this is a personal portfolio, I welcome any suggestions or bug reports. Fe
 
 ## 📝 License
 This project is open source and available under the [MIT License](LICENSE).
-
-## 📞 Contact
-Feel free to reach out if you have any questions or would like to connect!
-
-[Add your preferred contact methods here]
