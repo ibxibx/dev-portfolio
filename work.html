@@ -1,153 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <title> Ian Baumeister - My Work! </title>
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
-    <link rel="stylesheet" href="css/style.production.css">
-    <meta name="viewport" content="width=display-width, initial-scale=1">
-    <meta name="description" content="Ian Baumeister's - Web Developer Home Page">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="shortcut icon" href="./images/ibfavicon.png">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ian Baumeister - My Work!</title>
     <link
-        href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Sora:wght@100..800&display=swap"
-        rel="stylesheet">
-</head>
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css"
+    />
+    <link rel="stylesheet" href="css/style.production.css" />
+    <meta name="viewport" content="width=display-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Ian Baumeister's - Web Developer Home Page"
+    />
 
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="shortcut icon" href="./images/ibfavicon.png" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Sora:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
     <div class="body">
-        <header class="header">
-            <div class="header-content">
-                <div class="header-left">
-                    <img src="img/baumeister_logo.svg" height="50" alt="Ian Baumeister Logo">
-                    <h1>Ian Baumeister</h1>
-                    <h2>Web Developer and Designer</h2>
-                </div>
-                <div class="header-right">
-                    <img class="profile-picture" src="img/profilepic2.jpg" alt="Ian Baumeister's Profile Picture">
-                </div>
+      <header class="header">
+        <div class="header-content">
+          <div class="header-left">
+            <img
+              src="img/baumeister_logo.svg"
+              height="50"
+              alt="Ian Baumeister Logo"
+            />
+            <h1>Ian Baumeister</h1>
+            <h2>Web Developer and Designer</h2>
+          </div>
+          <div class="header-right">
+            <img
+              class="profile-picture"
+              src="img/profilepic2.jpg"
+              alt="Ian Baumeister's Profile Picture"
+            />
+          </div>
+        </div>
+        <br />
+        <div>
+          <nav class="button-container" role="menubar">
+            <a href="index.html" role="menuitem" class="navigation-list__item"
+              >Home</a
+            >
+            <a href="about.html" role="menuitem" class="navigation-list__item"
+              >About Me</a
+            >
+            <a
+              href="work.html"
+              role="menuitem"
+              class="navigation-list__item navigation-list__item--active"
+              >My Work</a
+            >
+            <a href="contact.html" role="menuitem" class="navigation-list__item"
+              >Contact</a
+            >
+          </nav>
+        </div>
+      </header>
+      <br />
+      <main>
+        <hr />
+        <div>
+          <h3 class="projects-heading">My Projects</h3>
+          <div class="projects-grid">
+            <div class="project-image-wrapper">
+              <img
+                class="project-image"
+                src="img/project-1.jpg"
+                alt="Pokédex JavaScript App"
+              />
+              <h4>Pokédex JavaScript App</h4>
+              <p style="text-align: left">
+                Pokédex JavaScript App is a dynamic web application built with
+                HTML, CSS, and JavaScript that serves as a digital Pokédex,
+                allowing users to browse and view detailed information about
+                different Pokémon characters.
+              </p>
+              <a href="https://github.com/ibxibx/pokemon-js-app"
+                >See project on GitHub</a
+              >
             </div>
-            <br>
-            <div>
-                <nav class="button-container" role="menubar">
-                    <a href="index.html" role="menuitem" class="navigation-list__item">Home</a>
-                    <a href="about.html" role="menuitem" class="navigation-list__item">About Me</a>
-                    <a href="work.html" role="menuitem" class="navigation-list__item navigation-list__item--active">My
-                        Work</a>
-                    <a href="contact.html" role="menuitem" class="navigation-list__item">Contact</a>
-                </nav>
+            <div class="project-image-wrapper">
+              <img
+                class="project-image"
+                src="img/project-2.jpg"
+                alt="MyMDB - My Movie Database - API"
+              />
+              <h4>MyMDB - My Movie Database - API</h4>
+              <p style="text-align: left">
+                MyMDB is a full-stack web application that allows movie
+                enthusiasts to explore, search, and manage their favorite
+                movies. Built using the MERN stack (MongoDB, Express.js, React,
+                and Node.js), this application provides a rich user interface
+                for interacting with movie data while maintaining user
+                preferences and favorites.
+              </p>
+              <a href="https://github.com/ibxibx/mymdb"
+                >See project on GitHub</a
+              >
             </div>
-        </header>
-        <br>
-        <main>
-            <hr>
-            <div>
-                <h3 class="projects-heading"> My Projects </h3>
-                <div class="projects-grid">
-
-                    <div class="project-image-wrapper">
-                        <img class="project-image" src="img/project-1.jpg" alt="Ian Baumeister's Sample Project 1">
-                        <h4>Project 1</h4>
-                        <p style="text-align:left">
-                            Within this project, I was responsible for the frontend. It’s written in React.js.
-                            Additionally,
-                            I've created the HTML and CSS templates.
-                        </p>
-                        <a href="#">See project on GitHub</a>
-                    </div>
-                    <div class="project-image-wrapper">
-                        <img class="project-image" src="img/project-2.jpg" alt="Ian Baumeister's Sample Project 2">
-                        <h4>Project 2</h4>
-                        <p style="text-align:left">
-                            Within this project, I was responsible for the frontend. It’s written in React.js.
-                            Additionally,
-                            I've created the HTML and CSS templates.
-                        </p>
-                        <a href="#">See project on GitHub</a>
-                    </div>
-                    <div class="project-image-wrapper">
-                        <img class="project-image" src="img/project-3.jpg" alt="Ian Baumeister's Sample Project 3">
-                        <h4>Project 3</h4>
-                        <p style="text-align:left">
-                            Within this project, I was responsible for the frontend. It’s written in React.js.
-                            Additionally,
-                            I've created the HTML and CSS templates.
-                        </p>
-                        <a href="#">See project on GitHub</a>
-                    </div>
-                    <div class="project-image-wrapper">
-                        <img class="project-image" src="img/project-4.jpg" alt="Ian Baumeister's Sample Project 4">
-                        <h4>Project 4</h4>
-                        <p style="text-align:left">
-                            Within this project, I was responsible for the frontend. It’s written in React.js.
-                            Additionally,
-                            I've created the HTML and CSS templates.
-                        </p>
-                        <a href="#">See project on GitHub</a>
-                    </div>
-                    <div class="project-image-wrapper">
-                        <img class="project-image" src="img/project-5.jpg" alt="Ian Baumeister's Sample Project 5">
-                        <h4>Project 5</h4>
-                        <p style="text-align:left">
-                            Within this project, I was responsible for the frontend. It’s written in React.js.
-                            Additionally,
-                            I've created the HTML and CSS templates.
-                        </p>
-                        <a href="#">See project on GitHub</a>
-                    </div>
-                    <div class="project-image-wrapper">
-                        <img class="project-image" src="img/project-6.jpg" alt="Ian Baumeister's Sample Project 6">
-                        <h4>Project 6</h4>
-                        <p style="text-align:left">
-                            Within this project, I was responsible for the frontend. It’s written in React.js.
-                            Additionally,
-                            I've created the HTML and CSS templates.
-                        </p>
-                        <a href="#">See project on GitHub</a>
-                    </div>
-                </div>
+            <div class="project-image-wrapper">
+              <img
+                class="project-image"
+                src="img/project-3.jpg"
+                alt="MyMDB - My Movie Database - Client"
+              />
+              <h4>MyMDB - My Movie Database - Client</h4>
+              <p style="text-align: left">
+                MyMDB is a full-stack web application built using the MERN stack
+                (MongoDB, Express, React, and Node.js). It's designed for movie
+                enthusiasts who want to explore, save, and manage information
+                about their favorite films.
+              </p>
+              <a href="https://github.com/ibxibx/mymdb/tree/clean-mymdb-client"
+                >See project on GitHub</a
+              >
             </div>
-            <hr>
-            <footer class="page-footer">
-                <div class="links-and-contact">
-                    <div class="links">
-                        <h3 class="links-title">Links</h3>
-                        <ul class="links-list">
-                            <li>
-                                <a href="https://github.com/ibxibx" target="_blank">
-                                    <img src="img/github-logo.svg" height="15" alt="My Github Logo">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://behance.net/ianbau" target="_blank">
-                                    <img src="img/behance_logo.svg" height="15"
-                                        alt="My Behance Design & Artwork Portfolio Logo">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://linkedin.com/in/avoian" target="_blank">
-                                    <img src="img/linkedIn_logo.svg" height="15" alt="My Linkedin Profile Logo">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://ianbaumeister.wordpress.com/" target="_blank">
-                                    <img src="img/baumeister_logo.svg" height="15" alt="My Design BlogSite Logo">
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </footer>
-            <br>
-            <br>
-        </main>
+            <div class="project-image-wrapper">
+              <img
+                class="project-image"
+                src="img/project-4.jpg"
+                alt="MeetLink - Events App"
+              />
+              <h4>MeetLink - Events App</h4>
+              <p style="text-align: left">
+                MeetLink is a serverless, progressive web application (PWA)
+                built with React using a test-driven development (TDD) approach.
+                The app uses the Google Calendar API to fetch upcoming events
+                for a specific city, allowing users to view and interact with
+                event details.
+              </p>
+              <a href="https://github.com/ibxibx/meetlink"
+                >See project on GitHub</a
+              >
+            </div>
+            <div class="project-image-wrapper">
+              <img
+                class="project-image"
+                src="img/project-5.jpg"
+                alt="NextChat App"
+              />
+              <h4>NextChat App</h4>
+              <p style="text-align: left">
+                NextChat is a feature-rich mobile chat application built with
+                React Native, allowing users to communicate easily through text,
+                images, and location sharing. Our goal is to create a
+                user-friendly chat app for mobile devices, providing a seamless
+                communication experience.
+              </p>
+              <a href="https://github.com/ibxibx/nextchat"
+                >See project on GitHub</a
+              >
+            </div>
+            <div class="project-image-wrapper">
+              <img
+                class="project-image"
+                src="img/project-6.jpg"
+                alt="MyMDB - My Movie Database - Angular"
+              />
+              <h4>MyMDB - My Movie Database - Angular</h4>
+              <p style="text-align: left">
+                MyMDB is a client-side application built with Angular that
+                interfaces with a movie API. It allows users to browse, search,
+                and manage their favorite movies while maintaining their own
+                watchlist and profile information.
+              </p>
+              <a href="https://github.com/ibxibx/mymdb-angular-client"
+                >See project on GitHub</a
+              >
+            </div>
+          </div>
+        </div>
+        <hr />
+        <footer class="page-footer">
+          <div class="links-and-contact">
+            <div class="links">
+              <h3 class="links-title">Links</h3>
+              <ul class="links-list">
+                <li>
+                  <a href="https://github.com/ibxibx" target="_blank">
+                    <img
+                      src="img/github-logo.svg"
+                      height="15"
+                      alt="My Github Logo"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a href="https://behance.net/ianbau" target="_blank">
+                    <img
+                      src="img/behance_logo.svg"
+                      height="15"
+                      alt="My Behance Design & Artwork Portfolio Logo"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a href="https://linkedin.com/in/avoian" target="_blank">
+                    <img
+                      src="img/linkedIn_logo.svg"
+                      height="15"
+                      alt="My Linkedin Profile Logo"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://ianbaumeister.wordpress.com/"
+                    target="_blank"
+                  >
+                    <img
+                      src="img/baumeister_logo.svg"
+                      height="15"
+                      alt="My Design BlogSite Logo"
+                    />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </footer>
+        <br />
+        <br />
+      </main>
     </div>
     <script src="js/script.js"></script>
     <script src="js/tota11y.min.js"></script>
-</body>
-
+  </body>
 </html>
