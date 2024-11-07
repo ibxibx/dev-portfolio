@@ -1,94 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ian Baumeister - Contact!</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css"
+    />
+    <link rel="stylesheet" href="css/style.production.css" />
+    <meta name="viewport" content="width=display-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Ian Baumeister's - Web Developer Contact Page. Please get in touch, and let us solve your challenges and fulfill your wishes together!"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="shortcut icon" href="./images/ibfavicon.png" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Sora:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-	<meta charset="UTF-8">
-	<title> Ian Baumeister - Contact! </title>
-	<link rel="stylesheet" type="text/css"
-		href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
-	<link rel="stylesheet" href="css/style.production.css">
-	<meta name="viewport" content="width=display-width, initial-scale=1">
-	<meta name="description"
-		content="Ian Baumeister's - Web Developer Contact Page. Please get in touch, and let us solve your challenges and fulfill your wishes together!">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="shortcut icon" href="./images/ibfavicon.png">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link
-		href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Sora:wght@100..800&display=swap"
-		rel="stylesheet">
+  <body>
+    <div class="body">
+      <header class="header">
+        <div class="header-content">
+          <div class="header-left">
+            <img
+              src="img/baumeister_logo.svg"
+              height="50"
+              alt="Ian Baumeister Logo"
+            />
+            <h1>Ian Baumeister</h1>
+            <h2>Web Developer and Designer</h2>
+          </div>
+          <div class="header-right">
+            <img
+              class="profile-picture"
+              src="img/profilepic2.jpg"
+              alt="Ian Baumeister's Profile Picture"
+            />
+          </div>
+        </div>
+        <br />
+        <div>
+          <nav class="button-container" role="menubar">
+            <a href="index.html" role="menuitem" class="navigation-list__item"
+              >Home</a
+            >
+            <a href="about.html" role="menuitem" class="navigation-list__item"
+              >About Me</a
+            >
+            <a href="work.html" role="menuitem" class="navigation-list__item"
+              >My Work</a
+            >
+            <a
+              href="contact.html"
+              role="menuitem"
+              class="navigation-list__item navigation-list__item--active"
+              >Contact</a
+            >
+          </nav>
+        </div>
+      </header>
+      <br />
+      <hr />
+      <main>
+        <br />
+        <div class="contact-form">
+          <form action="javascript:void(0)" method="post">
+            <div class="form-group">
+              <label for="email"><b>Email *</b></label>
+              <input
+                id="email"
+                type="email"
+                placeholder="Enter your email address"
+                required
+              />
+            </div>
 
-</head>
+            <div class="form-group">
+              <label for="telephone"><b>Telephone</b></label>
+              <textarea id="telephone" placeholder="Your Telephone"></textarea>
+            </div>
 
-<body>
+            <div class="form-group">
+              <label for="message"><b>Message *</b></label>
+              <textarea
+                id="message"
+                maxlength="540"
+                placeholder="Your Message"
+                required
+              ></textarea>
+            </div>
 
-	<div class="body">
-		<header class="header">
-			<div class="header-content">
-				<div class="header-left">
-					<img src="img/baumeister_logo.svg" height="50" alt="Ian Baumeister Logo">
-					<h1>Ian Baumeister</h1>
-					<h2>Web Developer and Designer</h2>
-				</div>
-				<div class="header-right">
-					<img class="profile-picture" src="img/profilepic2.jpg" alt="Ian Baumeister's Profile Picture">
-				</div>
-			</div>
-			<br>
-			<div>
-				<nav class="button-container" role="menubar">
-					<a href="index.html" role="menuitem" class="navigation-list__item">Home</a>
-					<a href="about.html" role="menuitem" class="navigation-list__item">About Me</a>
-					<a href="work.html" role="menuitem" class="navigation-list__item">My Work</a>
-					<a href="contact.html" role="menuitem"
-						class="navigation-list__item navigation-list__item--active">Contact</a>
-				</nav>
-			</div>
-		</header>
-		<br>
-		<hr>
-		<main>
-			<br>
-			<div class="contact-form">
-				<form action="javascript:void(0)" method="post">
-					<div class="form-group">
-						<label for="email"><b>Email *</b></label>
-						<input id="email" type="email" placeholder="Enter your email address" required>
-					</div>
-
-					<div class="form-group">
-						<label for="telephone"><b>Telephone</b></label>
-						<textarea id="telephone" placeholder="Your Telephone"></textarea>
-					</div>
-
-					<div class="form-group">
-						<label for="message"><b>Message *</b></label>
-						<textarea id="message" maxlength="540" placeholder="Your Message" required></textarea>
-					</div>
-
-					<div class="submit-button-wrapper">
-						<input id="submit-button" type="submit" value="Send Message">
-					</div>
-				</form>
-			</div>
-			<hr>
-			<br>
-			<div>
-				Ian Baumeister<br>
-				Dircksenstr. 44<br>
-				10178 Berlin<br>
-				Germany<br>
-				<br>
-				Tel: <a href="tel:+4917636127937" aria-label="Call +4917636127937">+4917636127937</a><br>
-				Skype: <a href="skype:djdamyan29" aria-label="Call or Message via Skype djdamyan29"> djdamyan29</a><br>
-				Email: <a href="mailto:ian@avotravel.com" aria-label="Send Email to ian@avotravel.com">
-					ian@avotravel.com</a>
-				<br>
-			</div>
-		</main>
-	</div>
-	<hr>
-	<script src="js/script.js"></script>
-	<script src="js/tota11y.min.js"></script>
-</body>
-
+            <div class="submit-button-wrapper">
+              <input id="submit-button" type="submit" value="Send Message" />
+            </div>
+          </form>
+        </div>
+        <hr />
+        <br />
+        <div>
+          Ian Baumeister<br />
+          Berlin Mitte<br />
+          Germany<br />
+          <br />
+          Tel:
+          <a href="tel:+4917636127937" aria-label="Call +4917636127937"
+            >+4917636127937</a
+          ><br />
+          Email:
+          <a
+            href="mailto:ian@avotravel.com"
+            aria-label="Send Email to ian@avotravel.com"
+          >
+            ian@avotravel.com</a
+          >
+          <br />
+        </div>
+      </main>
+    </div>
+    <hr />
+    <script src="js/script.js"></script>
+    <script src="js/tota11y.min.js"></script>
+  </body>
 </html>
