@@ -570,6 +570,7 @@ form input [type="submit"] {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    gap: 30px;
     /* Make the list items flex containers */
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
@@ -586,6 +587,7 @@ form input [type="submit"] {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    justify-content: center;
     /* Make the list item a flex container */
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -594,7 +596,7 @@ form input [type="submit"] {
 }
 
 .links-list li img {
-    margin-right: 5px;
+    margin-right: 0;
     /* Add space between image and text */
     height: 15px;
     /* Ensure all images have the same height */
